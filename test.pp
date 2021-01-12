@@ -41,7 +41,7 @@ end;
 
 
 {--------------------------------------------------------------}
-{ Main Program }
+{ Main Program - Quick example }
 begin
    Writeln(get_paste('99is6n23'));
 end.
