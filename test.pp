@@ -1,22 +1,37 @@
 {--------------------------------------------------------------}
-{ Declaring Main Program }
+{ Unit Declaration }
 
-program pastemyst;
+unit pastemyst;
 
 {--------------------------------------------------------------}
-{ Switches }
+{ switches }
 
 {$mode delphi}
 
 {--------------------------------------------------------------}
-{ units }
+{ Public Interface }
+
+interface
+
+{--------------------------------------------------------------}
+{ Fetches the paste with given id - Interface }
+
+function get_paste(_id: string): string;
+
+{--------------------------------------------------------------}
+{ Private Implementation }
+
+implementation
+
+{--------------------------------------------------------------}
+{ Units }
 
 uses 
    fphttpclient, 
    opensslsockets;
 
 {--------------------------------------------------------------}
-{ Constant Declarations }
+{ Constamt Declarations }
 
 const url = 'https://paste.myst.rs/api/v2/paste/';
 
@@ -24,19 +39,9 @@ const url = 'https://paste.myst.rs/api/v2/paste/';
 { Variable Declarations }
 
 Var Client : TFPHttpClient;
-var paste_id: string;
 
 {--------------------------------------------------------------}
-{ Prints Output to The console }
-
-procedure print(s: string);
-begin
-   Write(s, ^M);
-end;
-
-
-{--------------------------------------------------------------}
-{ GET the pasty }
+{ Fetches paste with given id - implementation }
 
 function get_paste(_id: string): string;
 begin
@@ -51,10 +56,5 @@ end;
 
 
 {--------------------------------------------------------------}
-{ Main Program }
 
-begin
-   Read(paste_id);
-   writeln('Fetching Paste with Id: ', paste_id);
-   print(get_paste(paste_id));
 end.
