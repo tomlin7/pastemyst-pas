@@ -8,11 +8,10 @@ Program example;
 // importing the unit, this is important
 uses pastemyst;
 
-//your paste's id
+// your paste's id
 const paste_id = 'id here';
 
 begin
-   Read(paste_id);
    writeln('Fetching Paste with Id: ', paste_id);
    Write(get_paste(paste_id), ^M);
 end.
