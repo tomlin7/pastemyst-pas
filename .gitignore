@@ -1,0 +1,7 @@
+# compiled binaries
+example
+*.o
+
+# compiled units 
+*.ppu
+
