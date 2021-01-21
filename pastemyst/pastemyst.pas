@@ -29,9 +29,9 @@ function get_private_paste(_id: string; _token: string): string;
 function create_paste(params: string): string;
 
 {--------------------------------------------------------------}
-{ checks user - interface }
+{ Get user - interface }
 
-function check_user(user_id: string): string;
+function get_user(user_id: string): string;
 
 
 {--------------------------------------------------------------}
@@ -115,8 +115,9 @@ end;
 
 
 {--------------------------------------------------------------}
-{ Check user - Implementation}
-function check_user(user_id: string): string;
+{ Get user - Implementation}
+
+function get_user(user_id: string): string;
 begin
    Client := TFPHttpClient.Create(Nil);
    try
