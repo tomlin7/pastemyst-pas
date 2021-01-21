@@ -26,8 +26,9 @@ function get_private_paste(_id: string; _token: string): string;
 {--------------------------------------------------------------}
 { Creating a new public paste - Interface }
 
-// function create_paste(params: string): string;
+function create_paste(params: string): string;
 
+{--------------------------------------------------------------}
 { checks user - interface }
 
 function check_user(user_id: string): string;
@@ -43,7 +44,9 @@ implementation
 
 uses 
    fphttpclient, 
-   opensslsockets;
+   opensslsockets,
+   SysUtils,
+   classes;
 
 {--------------------------------------------------------------}
 { Constant Declarations }
@@ -86,30 +89,33 @@ end;
 
 {--------------------------------------------------------------}
 { Creating a new public paste - Implementation }
-{
+
 function create_paste(params: string): string;
 
 var Response : TStringStream;
 
 begin
    Client := TFPHttpClient.Create(Nil);
+   Client.AddHeader('Content-Type','application/json; charset=UTF-8');
    Client.RequestBody := TRawByteStringStream.Create(params);
    Response := TStringStream.Create('');
    try
       try
-         Client.Post(url, Response);
-         create_paste := ('Response code is ' + inttostr(Client.ResponseStatusCode));
+         Client.Post(url + 'paste', Response);
+         create_paste := Response.DataString;
       except on E: Exception do
-         create_paste := ('Somethign bad happened: ' + E.message);
+         create_paste := ('A wild Exception appeared, ' + E.message);
       end;
    finally
-      Client.RequestedBody.Free;
+      Client.RequestBody.Free;
       Client.Free;
       Response.Free;
    end;
 end;
-}
 
+
+{--------------------------------------------------------------}
+{ Check user - Implementation}
 function check_user(user_id: string): string;
 begin
    Client := TFPHttpClient.Create(Nil);
@@ -122,6 +128,3 @@ end;
 {--------------------------------------------------------------}
 
 end.
-
-
-function ew();
