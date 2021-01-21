@@ -21,14 +21,14 @@ end.
 | Feature | Support |
 | :----------- | :-----------: |
 | Get pastes | Yes |
-| Get private pastes | No | 
-| Create pastes | No |
-| Create Private pastes* | No | 
+| Get private pastes | Yes | 
+| Create pastes | Yes |
+| Create Private pastes | No | 
 | Edit pastes | No | 
 | Delete pastes | No | 
-| Get Users | No |
+| Get Users | Yes |
 | Check if a user exists | No | 
 | Get a language by name | No | 
 | Get a language by extension | No |
 
-#### The package is on development.
+#### 🚧 The package is on development. 🚧
