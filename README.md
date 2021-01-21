@@ -18,17 +18,12 @@ end.
 ```
 
 ### Feature support
-| Feature | Support |
-| :----------- | :-----------: |
-| Get pastes | Yes |
-| Get private pastes | Yes | 
-| Create pastes | Yes |
-| Create Private pastes | No | 
-| Edit pastes | No | 
-| Delete pastes | No | 
-| Get Users | Yes |
-| Check if a user exists | No | 
-| Get a language by name | No | 
-| Get a language by extension | No |
+| Feature | Support | Feature | Support |
+| :-----------: | :-----------: | :----------: | :----------: |
+| Get pastes | Yes | Delete pastes | No | 
+| Get private pastes | Yes | Get Users | Yes |
+| Create pastes | Yes | Check if a user exists | No | 
+| Create Private pastes | No | Get a language by name | No | 
+| Edit pastes | No | Get a language by extension | No |
 
 #### 🚧 The package is on development. 🚧
