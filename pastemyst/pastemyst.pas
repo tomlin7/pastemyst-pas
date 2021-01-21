@@ -8,33 +8,66 @@ unit pastemyst;
 
 {$mode delphi}
 
-{--------------------------------------------------------------}
+
+
+{==============================================================}
 { Public Interface }
 
 interface
 
 {--------------------------------------------------------------}
-{ Fetches a paste with given id - Interface }
+{ Fetches a paste with given id }
 
 function get_paste(_id: string): string;
 
 {--------------------------------------------------------------}
-{ Fetches a private paste with given id - Interface }
+{ Fetches a private paste with given id }
 
 function get_private_paste(_id: string; _token: string): string;
 
 {--------------------------------------------------------------}
-{ Creating a new public paste - Interface }
+{ Creating a new public paste }
 
 function create_paste(params: string): string;
 
 {--------------------------------------------------------------}
-{ Get user - interface }
+{ Creating a new private paste }
 
-function get_user(user_id: string): string;
-
+function create_private_paste(params: string): string;
 
 {--------------------------------------------------------------}
+{ Editing an existing paste }
+
+function edit_paste(params: string): string;
+
+{--------------------------------------------------------------}
+{ Delete an existing paste }
+
+function delete_paste(params: string): string;
+
+{--------------------------------------------------------------}
+{ Get info about a user }
+
+function get_user(user_name: string): string;
+
+{--------------------------------------------------------------}
+{ Checks whether user exists }
+
+function user_exists(user_name: string): string;
+
+{--------------------------------------------------------------}
+{ Get programming language by it's name }
+
+function get_language_by_name(_name: string): string;
+
+{--------------------------------------------------------------}
+{ Get programming language by it's extension }
+
+function get_language_by_extension(extension: string): string;
+
+
+
+{==============================================================}
 { Private Implementation }
 
 implementation
@@ -58,8 +91,10 @@ const url = 'https://paste.myst.rs/api/v2/';
 
 Var Client : TFPHttpClient;
 
+
+
 {--------------------------------------------------------------}
-{ Fetches paste with given id - Implementation }
+{ Fetches a paste with given id }
 
 function get_paste(_id: string): string;
 begin
@@ -73,7 +108,7 @@ end;
 
 
 {--------------------------------------------------------------}
-{ Fetches a private paste with given id - Implementation }
+{ Fetches a private paste with given id }
 
 function get_private_paste(_id: string; _token: string): string;
 begin
@@ -86,9 +121,8 @@ begin
    end;
 end;
 
-
 {--------------------------------------------------------------}
-{ Creating a new public paste - Implementation }
+{ Creating a new public paste }
 
 function create_paste(params: string): string;
 
@@ -113,19 +147,72 @@ begin
    end;
 end;
 
+{--------------------------------------------------------------}
+{ Creating a new private paste }
+
+function create_private_paste(params: string): string;
+begin
+   writeln('check')
+end;
 
 {--------------------------------------------------------------}
-{ Get user - Implementation}
+{ Editing an existing paste }
 
-function get_user(user_id: string): string;
+function edit_paste(params: string): string;
+begin
+   writeln('check')
+end;
+
+{--------------------------------------------------------------}
+{ Delete an existing paste }
+
+function delete_paste(params: string): string;
+begin
+   writeln('check')
+end;
+
+{--------------------------------------------------------------}
+{ Get info about a user }
+
+function get_user(user_name: string): string;
 begin
    Client := TFPHttpClient.Create(Nil);
    try
-      check_user := Client.Get(url + 'user/' + user_id);
+      get_user := Client.Get(url + 'user/' + user_name);
    finally
       Client.Free;
    end;
 end;
+
+{--------------------------------------------------------------}
+{ Checks whether user exists }
+
+function user_exists(user_name: string): string;
+begin
+   Client := TFPHttpClient.Create(Nil);
+   try
+      user_exists := Client.Get(url + 'user/' + user_name + '/exists');
+   finally
+      Client.Free;
+   end;
+end;
+
+{--------------------------------------------------------------}
+{ Get programming language by it's name }
+
+function get_language_by_name(_name: string): string;
+begin
+   writeln('check')
+end;
+
+{--------------------------------------------------------------}
+{ Get programming language by it's extension }
+
+function get_language_by_extension(extension: string): string;
+begin
+   writeln('check')
+end;
+
 {--------------------------------------------------------------}
 
 end.
