@@ -1,5 +1,8 @@
 # compiled binaries
 example
+example_2
+example_3
+
 *.o
 
 # compiled units 
