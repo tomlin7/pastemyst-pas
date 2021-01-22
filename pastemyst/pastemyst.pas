@@ -188,7 +188,13 @@ end;
 
 function delete_paste(_token: string; _id: string): string;
 begin
-   
+   Client := TFPHttpClient.Create(Nil);
+   Client.AddHeader('Authorization', _token);
+   try
+      delete_paste := Client.Delete(url + 'paste/' + _id);
+   finally
+      Client.Free;
+   end;
 end;
 
 {--------------------------------------------------------------}
