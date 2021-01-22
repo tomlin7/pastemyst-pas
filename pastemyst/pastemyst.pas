@@ -232,7 +232,12 @@ end;
 
 function get_language_by_extension(extension: string): string;
 begin
-   
+   Client := TFPHttpClient.Create(Nil);
+   try
+      get_language_by_extension := Client.Get(url + 'data/languageExt?extension=' + extension)
+   finally
+      Client.Free;
+   end;
 end;
 
 {--------------------------------------------------------------}
