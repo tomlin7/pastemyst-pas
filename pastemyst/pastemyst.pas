@@ -166,16 +166,15 @@ end;
 {--------------------------------------------------------------}
 { Editing an existing paste }
 
-function edit_paste(params: string; _token: string): string;
+function edit_paste(_token: string; _id: string; params: string): string;
 begin
-   // patch()
    Client := TFPHttpClient.Create(Nil);
    Client.AddHeader('Content-Type', 'application/json; charset=UTF-8');
    Client.AddHeader('Authorization', _token);
    Client.RequestBody := TRawByteStringStream.Create(params);
    Response := TStringStream.Create('');
    try
-      Client.HTTPMethod('PATCH', URL, Response, []);
+      Client.HTTPMethod('PATCH', url + 'paste/' + _id, Response, []);
       create_paste := Response.DataString;
    finally
       Client.RequestBody.Free;
@@ -187,9 +186,9 @@ end;
 {--------------------------------------------------------------}
 { Delete an existing paste }
 
-function delete_paste(params: string): string;
+function delete_paste(_token: string; _id: string): string;
 begin
-   writeln('check')
+   
 end;
 
 {--------------------------------------------------------------}
