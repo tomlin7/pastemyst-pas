@@ -1,4 +1,4 @@
-{Example -  }
+{Example - Getting Language by extension }
 
 Program example;
 
@@ -10,14 +10,16 @@ Uses pastemyst in '../pastemyst/pastemyst.pas';
 {--------------------------------------------------------------}
 { Variable Declarations}
 
-Var language_extension: string;
+Var _Language_Extension :  string;
 
 {--------------------------------------------------------------}
 { Main Program }
 
 Begin
-   readln(language_extension);
-   writeln(get_language_by_extension(language_extension));
+   write('Language Extension : ')
+   read(_Language_Extension);
+   writeln('Fetching Language...')
+   writeln(get_language_by_extension(_Language_Extension));
 End.
 
 

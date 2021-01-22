@@ -1,4 +1,4 @@
-{Example -  }
+{Example - Deleting an Existing Paste }
 
 Program example;
 
@@ -11,16 +11,19 @@ uses pastemyst in '../pastemyst/pastemyst.pas';
 { Variable Declarations}
 
 var
-    token: string,
-    paste_id: string;
+   _Token    : string;
+   _Paste_ID : string;
 
 {--------------------------------------------------------------}
 { Main Program }
 
 begin
-   readln(token);
-   readln(paste_id);
-   writeln(delete_paste(token, paste_id));
+   write('Authorization Token : ')
+   read(_Token);
+   write(^M, 'ID of the Paste : ')
+   read(_Paste_ID);
+   writeln('Deleting paste...')
+   writeln(delete_paste(_Token, _Paste_ID));
 end.
 
 

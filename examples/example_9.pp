@@ -1,24 +1,26 @@
-{Example -  }
+{Example - Getting Language by name }
 
 Program example;
 
 {--------------------------------------------------------------}
 { import the pastemyst unit to get started }
 
-uses pastemyst in '../pastemyst/pastemyst.pas';
+Uses pastemyst in '../pastemyst/pastemyst.pas';
 
 {--------------------------------------------------------------}
 { Variable Declarations}
 
-var language_name: string;
+Var _Language_Name:  string;
 
 {--------------------------------------------------------------}
 { Main Program }
 
-begin
-   readln(language_name);
-   writeln(get_language_by_name(language_name));
-end.
+Begin
+   write('Language Name : ')
+   read(_Language_Name);
+   writeln('Fetching Language...')
+   writeln(get_language_by_name(_Language_Name));
+End.
 
 
 {--------------------------------------------------------------}

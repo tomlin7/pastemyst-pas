@@ -5,21 +5,23 @@ Program example;
 {--------------------------------------------------------------}
 { import the pastemyst unit to get started }
 
-uses pastemyst in '../pastemyst/pastemyst.pas';
+Uses pastemyst in '../pastemyst/pastemyst.pas';
 
 {--------------------------------------------------------------}
 { Variable Declarations}
 
-var user_name: string;
+Var _User_Name:  string;
 
 {--------------------------------------------------------------}
 { Main Program }
 
 
-begin
-    readln(user_id);
-    writeln(get_user(user_name));
-end.
+Begin
+   write('Enter User Name : ');
+   read(_User_Name);
+   writeln('Fetching user...');
+   writeln(get_user(_User_Name));
+End.
 
 
 {--------------------------------------------------------------}

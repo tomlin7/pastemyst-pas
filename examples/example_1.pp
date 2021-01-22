@@ -5,22 +5,23 @@ Program example;
 {--------------------------------------------------------------}
 { import the pastemyst unit to get started }
 
-uses pastemyst in '../pastemyst/pastemyst.pas';
+Uses pastemyst in '../pastemyst/pastemyst.pas';
 
 {--------------------------------------------------------------}
 { Variable Declarations}
 
-var paste_id: string;
+Var _Paste_ID:  string;
 
 
 {--------------------------------------------------------------}
 { Main Program }
 
-begin
-   readln(paste_id);
-   writeln('Fetching Paste with Id: ', paste_id);
-   writeln(get_paste(paste_id));
-end.
+Begin
+   write('ID of the Paste: ')
+   read(_Paste_ID);
+   writeln('Fetching Paste...');
+   writeln(get_paste(_Paste_ID));
+End.
 
 
 {--------------------------------------------------------------}
