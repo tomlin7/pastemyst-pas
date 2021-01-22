@@ -1,4 +1,4 @@
-{Example -  }
+{Example - Checking whether a user exists or not }
 
 Program example;
 
