@@ -22,8 +22,8 @@ end.
 | :-----------: | :-----------: | :----------: | :----------: |
 | Get pastes | Yes | Delete pastes | No | 
 | Get private pastes | Yes | Get Users | Yes |
-| Create pastes | Yes | Check if a user exists | No | 
-| Create Private pastes | No | Get a language by name | No | 
-| Edit pastes | No | Get a language by extension | No |
+| Create pastes | Yes | Check if a user exists | Yes | 
+| Create Private pastes | Yes | Get a language by name | Yes | 
+| Edit pastes | Yes | Get a language by extension | Yes |
 
 #### 🚧 The package is on development. 🚧
