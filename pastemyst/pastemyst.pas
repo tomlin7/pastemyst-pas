@@ -219,7 +219,12 @@ end;
 
 function get_language_by_name(_name: string): string;
 begin
-   writeln('check')
+   Client := TFPHttpClient.Create(Nil);
+   try
+      get_language_by_name := Client.Get(url + 'data/language?name=' + _name);
+   finally
+      Client.Free;
+   end;
 end;
 
 {--------------------------------------------------------------}
@@ -227,7 +232,7 @@ end;
 
 function get_language_by_extension(extension: string): string;
 begin
-   writeln('check')
+   
 end;
 
 {--------------------------------------------------------------}
