@@ -53,7 +53,7 @@ function get_user(user_name: string): string;
 {--------------------------------------------------------------}
 { Checks whether user exists }
 
-function user_exists(user_name: string): string;
+function user_exists(user_name: string): integer;
 
 {--------------------------------------------------------------}
 { Get programming language by it's name }
@@ -187,11 +187,12 @@ end;
 {--------------------------------------------------------------}
 { Checks whether user exists }
 
-function user_exists(user_name: string): string;
+function user_exists(user_name: string): integer;
 begin
    Client := TFPHttpClient.Create(Nil);
    try
-      user_exists := Client.Get(url + 'user/' + user_name + '/exists');
+      Client.Get(url + 'user/' + user_name + '/exists');
+      user_exists := Client.ResponseStatusCode // make it return a boolean later
    finally
       Client.Free;
    end;
