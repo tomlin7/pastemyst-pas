@@ -5,20 +5,20 @@ Program example;
 {--------------------------------------------------------------}
 { import the pastemyst unit to get started }
 
-uses pastemyst in '../pastemyst/pastemyst.pas';
+Uses pastemyst in '../pastemyst/pastemyst.pas';
 
 {--------------------------------------------------------------}
 { Variable Declarations}
 
-var language_extension: string;
+Var language_extension: string;
 
 {--------------------------------------------------------------}
 { Main Program }
 
-begin
+Begin
    readln(language_extension);
    writeln(get_language_by_extension(language_extension));
-end.
+End.
 
 
 {--------------------------------------------------------------}
