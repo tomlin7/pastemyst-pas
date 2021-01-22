@@ -150,9 +150,25 @@ end;
 {--------------------------------------------------------------}
 { Creating a new private paste }
 
-function create_private_paste(params: string): string;
+function create_private_paste(params: string; _token: string): string;
 begin
-   writeln('check')
+   Client := TFPHttpClient.Create(Nil);
+   Client.AddHeader('Content-Type', 'application/json; charset=UTF-8');
+   Client.AddHeader('Authorization', _token);
+   Client.RequestBody := TRawByteStringStream.Create(params);
+   Response := TStringStream.Create('');
+   try
+      try
+         Client.Post(url + 'paste', Response);
+         create_paste := Response.DataString;
+      except on E: Exception do
+         create_paste := ('A wild Exception appeared, ' + E.message);
+      end;
+   finally
+      Client.RequestBody.Free;
+      Client.Free;
+      Response.Free;
+   end;
 end;
 
 {--------------------------------------------------------------}
