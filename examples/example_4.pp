@@ -3,25 +3,44 @@
 Program example;
 
 {--------------------------------------------------------------}
+{ Switches }
+
+{$mode delphi}
+
+{--------------------------------------------------------------}
 { import the pastemyst unit to get started }
 
-uses pastemyst in '../pastemyst/pastemyst.pas';
+Uses 
+   pastemyst in '../pastemyst/pastemyst.pas',
+   jsonparser, fpjson, sysutils, classes;
 
 {--------------------------------------------------------------}
 { Variable Declarations}
 
-var
-    token: string,
-    params: string;
+Var 
+   _Token:  string;
+   _File :  TFileStream;
+   _Data :  TJSONData;
+   _Enum :  TJSONEnum;
 
 {--------------------------------------------------------------}
 { Main Program }
 
-begin
-   readln(token);
-   readln(params);
-   writeln(create_private_paste(token, params));
-end.
+Begin
+   _Data := Nil;
+   _File := TFileStream.Create('./samples/sample_private_paste.json', fmOpenRead Or fmShareDenywrite);
+   write('Authorization Token : ')
+   read(_Token);
+   Try
+      _Data := GetJSON(_File);
+      writeln('Creating private paste...', ^M, 'Using json data in samples/sample_private_paste.json')
+      writeln(create_private_paste(_Token, _Data.AsJSON));
+   Finally
+      _Data.Free;
+      _File.Free;
+End;
+
+End.
 
 
 {--------------------------------------------------------------}

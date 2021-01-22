@@ -3,28 +3,47 @@
 Program example;
 
 {--------------------------------------------------------------}
+{ Switches }
+
+{$mode delphi}
+
+{--------------------------------------------------------------}
 { import the pastemyst unit to get started }
 
-uses pastemyst in '../pastemyst/pastemyst.pas';
+Uses 
+   pastemyst in '../pastemyst/pastemyst.pas',
+   jsonparser, fpjson, sysutils, classes;
 
 {--------------------------------------------------------------}
 { Variable Declarations}
 
-var 
-   token: string,
-   id: string,
-   params: string;
-
+Var 
+   _Token:  string;
+   _Id   :  string;
+   _File :  TFileStream;
+   _Data :  TJSONData;
+   _Enum :  TJSONEnum;
 
 {--------------------------------------------------------------}
 { Main Program }
 
-begin
-   readln(token);
-   readln(id);
-   readln(params);
-   writeln(edit_paste(token, id, params));
-end.
+Begin
+   _Data := Nil;
+   _File := TFileStream.Create('./samples/sample_edit_paste.json', fmOpenRead Or fmShareDenywrite);
+   write('Autorization Token : ');
+   read(_Token);
+   write(^M, 'ID of the paste : ')
+   read(_Id);
+   Try
+      _Data := GetJSON(_File);
+      writeln('Editing paste...', ^M, 'Using json data in samples/sample_edit_paste.json');
+      writeln(edit_paste(token, id, params));
+   Finally
+      _Data.Free;
+      _File.Free;
+End;
+
+End.
 
 
 {--------------------------------------------------------------}
