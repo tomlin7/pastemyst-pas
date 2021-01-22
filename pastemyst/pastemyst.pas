@@ -134,12 +134,8 @@ begin
    Client.RequestBody := TRawByteStringStream.Create(params);
    Response := TStringStream.Create('');
    try
-      try
-         Client.Post(url + 'paste', Response);
-         create_paste := Response.DataString;
-      except on E: Exception do
-         create_paste := ('A wild Exception appeared, ' + E.message);
-      end;
+      Client.Post(url + 'paste', Response);
+      create_paste := Response.DataString;
    finally
       Client.RequestBody.Free;
       Client.Free;
@@ -158,12 +154,8 @@ begin
    Client.RequestBody := TRawByteStringStream.Create(params);
    Response := TStringStream.Create('');
    try
-      try
-         Client.Post(url + 'paste', Response);
-         create_paste := Response.DataString;
-      except on E: Exception do
-         create_paste := ('A wild Exception appeared, ' + E.message);
-      end;
+      Client.Post(url + 'paste', Response);
+      create_paste := Response.DataString;
    finally
       Client.RequestBody.Free;
       Client.Free;
@@ -174,9 +166,22 @@ end;
 {--------------------------------------------------------------}
 { Editing an existing paste }
 
-function edit_paste(params: string): string;
+function edit_paste(params: string; _token: string): string;
 begin
-   writeln('check')
+   // patch()
+   Client := TFPHttpClient.Create(Nil);
+   Client.AddHeader('Content-Type', 'application/json; charset=UTF-8');
+   Client.AddHeader('Authorization', _token);
+   Client.RequestBody := TRawByteStringStream.Create(params);
+   Response := TStringStream.Create('');
+   try
+      Client.HTTPMethod('PATCH', URL, Response, []);
+      create_paste := Response.DataString;
+   finally
+      Client.RequestBody.Free;
+      Client.Free;
+      Response.Free;
+   end;
 end;
 
 {--------------------------------------------------------------}
