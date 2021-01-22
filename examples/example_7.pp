@@ -10,7 +10,7 @@ uses pastemyst in '../pastemyst/pastemyst.pas';
 {--------------------------------------------------------------}
 { Variable Declarations}
 
-var user_id: string;
+var user_name: string;
 
 {--------------------------------------------------------------}
 { Main Program }
@@ -18,7 +18,7 @@ var user_id: string;
 
 begin
     readln(user_id);
-    writeln(get_user(user_id));
+    writeln(get_user(user_name));
 end.
 
 
