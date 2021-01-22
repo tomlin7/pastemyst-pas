@@ -38,12 +38,12 @@ function create_private_paste(params: string): string;
 {--------------------------------------------------------------}
 { Editing an existing paste }
 
-function edit_paste(params: string): string;
+function edit_paste(_token: string; _id: string; params: string): string;
 
 {--------------------------------------------------------------}
 { Delete an existing paste }
 
-function delete_paste(params: string): string;
+function delete_paste(_token: string; _id: string): string;
 
 {--------------------------------------------------------------}
 { Get info about a user }
