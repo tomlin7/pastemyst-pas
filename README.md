@@ -16,7 +16,7 @@ begin
    Write(get_paste(paste_id), ^M);
 end.
 ```
-
+[documentation](https://billyeatcookies.gitbook.io/pastemyst-pas/)
 ### Feature support
 | Feature | Support | Feature | Support |
 | :-----------: | :-----------: | :----------: | :----------: |
