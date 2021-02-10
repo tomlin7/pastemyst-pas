@@ -33,7 +33,7 @@ function create_paste(params: string): string;
 {--------------------------------------------------------------}
 { Creating a new private paste }
 
-function create_private_paste(params: string): string;
+function create_private_paste(params: string; _token: string): string;
 
 {--------------------------------------------------------------}
 { Editing an existing paste }
@@ -89,8 +89,9 @@ const url = 'https://paste.myst.rs/api/v2/';
 {--------------------------------------------------------------}
 { Variable Declarations }
 
-Var Client : TFPHttpClient;
-
+Var
+   Client : TFPHttpClient;
+   Response : TStringStream;
 
 
 {--------------------------------------------------------------}
@@ -125,9 +126,6 @@ end;
 { Creating a new public paste }
 
 function create_paste(params: string): string;
-
-var Response : TStringStream;
-
 begin
    Client := TFPHttpClient.Create(Nil);
    Client.AddHeader('Content-Type','application/json; charset=UTF-8');
