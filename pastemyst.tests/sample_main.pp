@@ -4,12 +4,9 @@ program project1;
 
 uses
     Classes,
-    TextTestRunner,
     sample_tests;
 
 begin
     // register all tests
     sample_tests.RegisterTests;
-
-    RunRegisteredTests;
 end.
