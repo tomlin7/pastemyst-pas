@@ -1,68 +1,73 @@
-unit sample_tests;
+
+Unit sample_tests;
 
 {$mode objfpc}{$H+}
 
-interface
+Interface
 
-uses
-  Classes, SysUtils,
-  fpcunit, testutils,
-  testregistry, Dialogs;
+Uses 
+TestFramework;
 
-type
-  TTestCaseFirst = class(TTestCase)
-  published
-    procedure TestWarning;
-    procedure TestOne;
-    procedure TestTwo;
-    procedure TestThree;
-    procedure TestFour;
-  end;
-
-procedure RegisterTests;
+Type 
+   TTestCaseFirst =  Class(TTestCase)
+      Published 
+         Procedure TestWarning;
+         Procedure TestOne;
+         Procedure TestNoError;
+         Procedure TestThree;
+         Procedure TestFour;
+   End;
 
 
-implementation
+Procedure RegisterTests;
 
 
-procedure RegisterTests;
-begin
-  RegisterTest(TTestCaseFirst);
-end;
+Implementation
+
+Uses 
+SysUtils;
+
+
+{ register all test classes }
+Procedure RegisterTests;
+Begin
+   TestFramework.RegisterTest(TTestCaseFirst.Suite);
+End;
 
 { TTestCaseFirst }
 
-procedure TTestCaseFirst.TestWarning;
-begin
-  // Do nothing here - should cause a Warning
-end;
+Procedure TTestCaseFirst.TestWarning;
+Begin
+   // warning, chills!
+End;
 
-procedure TTestCaseFirst.TestOne;
-begin
-  Check(1 + 1 = 3, 'Catastrophic arithmetic failure!');
-end;
+Procedure TTestCaseFirst.TestOne;
+Begin
+   Check(1 + 1 = 3, 'Catastrophic arithmetic failure!');
+End;
 
-procedure TTestCaseFirst.TestTwo;
-begin
-  Check(1 + 1 = 2, 'Catastrophic arithmetic failure!');
-end;
+Procedure TTestCaseFirst.TestNoError;
+Begin
+   Check(1 + 1 = 2, 'Catastrophic arithmetic failure!');
+End;
 
-procedure TTestCaseFirst.TestThree;
-var
-  s: string;
-begin
-  s := 'hello';
-  CheckEquals('Hello', s, 'Failed CheckEquals');
-end;
+Procedure TTestCaseFirst.TestThree;
 
-procedure TTestCaseFirst.TestFour;
-var
-  x, y: integer;
-begin
-  x := 10;
-  y := 0;
-  Check(x / y = 0, 'Failed on 1');
-end;
+Var 
+   s:  string;
+Begin
+   s := 'hello';
+   CheckEquals('Hello', s, 'Failed CheckEquals');
+End;
 
-end.
+Procedure TTestCaseFirst.TestFour;
 
+Var 
+   x, y:  integer;
+Begin
+   x := 10;
+   y := 0;
+   Check(x / y = 0, 'Failed on 1');
+End;
+
+End.
