@@ -20,7 +20,7 @@ end.
 ### Feature support
 | Feature | Support | Feature | Support |
 | :-----------: | :-----------: | :----------: | :----------: |
-| Get pastes | Yes | Delete pastes | No | 
+| Get pastes | Yes | Delete pastes | Yes | 
 | Get private pastes | Yes | Get Users | Yes |
 | Create pastes | Yes | Check if a user exists | Yes | 
 | Create Private pastes | Yes | Get a language by name | Yes | 
