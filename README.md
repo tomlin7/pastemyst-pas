@@ -1,3 +1,17 @@
+<table>
+  <tr>
+    <td align="center" width="25%">
+      <img src="./.github/icon.gif">
+    </td>
+    <td align="center" width="75%">
+
+# PasteMyst-Pas
+
+An API wrapper for [PasteMyst](https://paste.myst.rs/) written in **Pascal!**
+
+  </tr>
+</table>
+
 # pastemyst-pas
 pastemyst api wrapper written in pascal.
 
@@ -25,5 +39,3 @@ end.
 | Create pastes | Yes | Check if a user exists | Yes | 
 | Create Private pastes | Yes | Get a language by name | Yes | 
 | Edit pastes | Yes | Get a language by extension | Yes |
-
-#### 🚧 The package is on development. 🚧
