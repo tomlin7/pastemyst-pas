@@ -1,16 +1,18 @@
-<table>
-  <tr>
-    <td align="center" width="30%">
-      <img src="./.github/icon.gif">
-    </td>
-    <td align="center" width="70%">
+<center>
+   <table>
+   <tr>
+      <td align="center" width="30%">
+         <img src="./.github/icon.gif">
+      </td>
+      <td align="center" width="70%">
 
-# PasteMyst-Pas
+   # PasteMyst-Pas
 
-An API wrapper for [PasteMyst](https://paste.myst.rs/) written in **Pascal!**
+   An API wrapper for [PasteMyst](https://paste.myst.rs/) written in **Pascal!**
 
-  </tr>
-</table>
+   </tr>
+   </table>
+</center>
 
 ## Sample Usage
 ```pas
