@@ -38,12 +38,12 @@ function create_private_paste(params: string; _token: string): string;
 {--------------------------------------------------------------}
 { Editing an existing paste }
 
-function edit_paste(_token: string; _id: string; params: string): string;
+function edit_paste(_id: string; params: string; _token: string): string;
 
 {--------------------------------------------------------------}
 { Delete an existing paste }
 
-function delete_paste(_token: string; _id: string): string;
+function delete_paste(_id: string; _token: string): string;
 
 {--------------------------------------------------------------}
 { Get info about a user }
@@ -164,7 +164,7 @@ end;
 {--------------------------------------------------------------}
 { Editing an existing paste }
 
-function edit_paste(_token: string; _id: string; params: string): string;
+function edit_paste(_id: string; params: string; _token: string): string;
 begin
    Client := TFPHttpClient.Create(Nil);
    Client.AddHeader('Content-Type', 'application/json; charset=UTF-8');
@@ -184,7 +184,7 @@ end;
 {--------------------------------------------------------------}
 { Delete an existing paste }
 
-function delete_paste(_token: string; _id: string): string;
+function delete_paste(_id: string; _token: string): string;
 begin
    Client := TFPHttpClient.Create(Nil);
    Client.AddHeader('Authorization', _token);
