@@ -1,9 +1,9 @@
 <table>
   <tr>
-    <td align="center" width="30%">
+    <td align="center" width="26%">
       <img src="./.github/icon.gif">
     </td>
-    <td align="center" width="25%">
+    <td align="center" width="100%">
 
 # PasteMyst-Pas
 
