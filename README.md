@@ -3,7 +3,7 @@
     <td align="center" width="30%">
       <img src="./.github/icon.gif">
     </td>
-    <td align="center" width="100%">
+    <td align="center" width="70%">
 
 # PasteMyst-Pas
 
