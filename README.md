@@ -12,9 +12,6 @@ An API wrapper for [PasteMyst](https://paste.myst.rs/) written in **Pascal!**
   </tr>
 </table>
 
-# pastemyst-pas
-pastemyst api wrapper written in pascal.
-
 ## Sample Usage
 ```pas
 Program example;
