@@ -32,3 +32,4 @@ lib/
 
 # Application bundle for Mac OS
 *.app/
+pastemyst.tests/pastemyst.tests
