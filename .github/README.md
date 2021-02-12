@@ -12,10 +12,6 @@
 </div>
 
 
-<table style="margin-left: auto; margin-right: auto;">
-<tr>
-<td>
-
 <p align="center">
   <a href="#about">About</a> •
   <a href="#installation">Installation</a> •
@@ -28,9 +24,6 @@
   <a href="#support">Support</a> •
   <a href="#license">License</a>
 </p>
-</td>
-</tr>
-</table>
 
 ---
 
