@@ -31,10 +31,11 @@
 <tr>
 <td>
 
-**PasteMyst-Pas** is an API wrapper for [**pastemyst**](https://paste.myst.rs) written in **FreePascal** <img src="./res/fpc.gif" width=40>
+**PasteMyst-Pas** is an API wrapper written in **FreePascal** <img src="./res/fpc.gif" width=40> for [**pastemyst**](https://paste.myst.rs),
+a powerful website for storing and sharing text and code snippets. completely free and open source. PasteMyst is created by [CodeMyst](https://github.com/CodeMyst). This library contains pre-defined, easy-to-use functions which uses an HTTPClient to connect to the API.
 
 <p align="right">
-<!-- <sub>(Preview)</sub> -->
+<sub>- Billy</sub>
 </p>
 
 </td>
@@ -68,6 +69,11 @@ end.
 | Create pastes         | ✔️      | Check if a user exists      | ✔️      | 
 | Create Private pastes | ✔️      | Get a language by name      | ✔️      | 
 | Edit pastes           | ✔️      | Get a language by extension | ✔️      |
+
+
+
+The package is on developement process. <br>
+[![forthebadge](https://forthebadge.com/images/badges/0-percent-optimized.svg)](https://forthebadge.com)
 
 
 <!--✔️❌-->
