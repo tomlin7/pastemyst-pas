@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src="https://github.com/billyeatcookies/pastemyst-pas/.github/res/logo_static.png" width="200" alt="PasteMyst.Pas">
+  <img src="./res/logo_static.png" width="200" alt="PasteMyst.Pas">
 </h1>
 
 <div align="center">
