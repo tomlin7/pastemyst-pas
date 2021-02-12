@@ -1,3 +1,72 @@
+<style>
+   table, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+   }
+   table.center {
+      margin-left: auto; 
+      margin-right: auto;
+   }
+</style>
+
+<h1 align="center">
+  <br>
+  <img src="./logo_static.png" width="200" alt="PasteMyst.Pas">
+</h1>
+
+<div align="center">
+   <h1>PasteMyst-Pas</h1>
+   <h4>PasteMyst API Wrapper</h4>
+   <img src="res/madewithpascal.png" width=220>
+   <img src="https://forthebadge.com/images/badges/built-with-love.svg">
+
+</div>
+
+
+<table class="center">
+<tr>
+<td>
+
+<p align="center">
+  <a href="#about">About</a> •
+  <a href="#installation">Installation</a> •
+  <a href="#updating">Updating</a> •
+  <a href="#features">Features</a> •
+  <a href="#binds">Binds</a> •
+  <a href="#wiki">Wiki</a> •
+  <a href="#contributing">Contributing</a> •
+  <a href="#credits">Credits</a> •
+  <a href="#support">Support</a> •
+  <a href="#license">License</a>
+</p>
+</td>
+</tr>
+</table>
+
+---
+
+## About
+
+<table class="center">
+<tr>
+<td>
+
+**PasteMyst-Pas** is an API wrapper for [**pastemyst**](https://paste.myst.rs) written in **FreePascal** <img src="./fpc.gif" width=40>
+
+<p align="right">
+<!-- <sub>(Preview)</sub> -->
+</p>
+
+</td>
+</tr>
+</table>
+
+## Installation
+
+just install it(sample doc)
+
+
+<!-- Design #2
 <center>
    <table>
    <tr>
@@ -13,6 +82,8 @@
    </tr>
    </table>
 </center>
+-->
+
 
 ## Sample Usage
 ```pas
