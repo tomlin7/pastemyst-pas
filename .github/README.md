@@ -1,14 +1,3 @@
-<style>
-   table, td {
-      border: 1px solid black;
-      border-collapse: collapse;
-   }
-   table.center {
-      margin-left: auto; 
-      margin-right: auto;
-   }
-</style>
-
 <h1 align="center">
   <br>
   <img src="./logo_static.png" width="200" alt="PasteMyst.Pas">
@@ -23,7 +12,7 @@
 </div>
 
 
-<table class="center">
+<table style="margin-left: auto; margin-right: auto;">
 <tr>
 <td>
 
@@ -47,7 +36,7 @@
 
 ## About
 
-<table class="center">
+<table style="margin-left: auto; margin-right: auto;">
 <tr>
 <td>
 
