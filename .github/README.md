@@ -40,7 +40,7 @@
 <tr>
 <td>
 
-**PasteMyst-Pas** is an API wrapper for [**pastemyst**](https://paste.myst.rs) written in **FreePascal** <img src="./fpc.gif" width=40>
+**PasteMyst-Pas** is an API wrapper for [**pastemyst**](https://paste.myst.rs) written in **FreePascal** <img src="./res/fpc.gif" width=40>
 
 <p align="right">
 <!-- <sub>(Preview)</sub> -->
