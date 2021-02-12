@@ -31,10 +31,13 @@ end.
 ```
 [documentation](https://billyeatcookies.gitbook.io/pastemyst-pas/)
 ### Feature support
-| Feature | Support | Feature | Support |
-| :-----------: | :-----------: | :----------: | :----------: |
-| Get pastes | Yes | Delete pastes | Yes | 
-| Get private pastes | Yes | Get Users | Yes |
-| Create pastes | Yes | Check if a user exists | Yes | 
-| Create Private pastes | Yes | Get a language by name | Yes | 
-| Edit pastes | Yes | Get a language by extension | Yes |
+| Feature               | Support| Feature                     | Support|
+| :--------------------:|:------:| :--------------------------:| :-----:|
+| Get pastes            | ✔️      | Delete pastes               | ✔️      | 
+| Get private pastes    | ✔️      | Get Users                   | ✔️      |
+| Create pastes         | ✔️      | Check if a user exists      | ✔️      | 
+| Create Private pastes | ✔️      | Get a language by name      | ✔️      | 
+| Edit pastes           | ✔️      | Get a language by extension | ✔️      |
+
+
+<!--✔️❌-->        
