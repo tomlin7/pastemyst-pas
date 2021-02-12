@@ -2,7 +2,7 @@
    <table>
    <tr>
       <td align="center" width="30%">
-         <img src="./.github/icon.gif">
+         <img src="./icon.gif">
       </td>
       <td align="center" width="70%">
 
