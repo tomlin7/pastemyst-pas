@@ -11,17 +11,15 @@
 
 </div>
 
+---
 
 <p align="center">
   <a href="#about">About</a> •
-  <a href="#installation">Installation</a> •
-  <a href="#updating">Updating</a> •
+  <a href="#installation">Installation</a> • 
   <a href="#features">Features</a> •
-  <a href="#binds">Binds</a> •
-  <a href="#wiki">Wiki</a> •
-  <a href="#contributing">Contributing</a> •
+  <a href="#wiki">Docs</a> •
+  <a href="./.github/CONTRIBUTING.md">Contributing</a> •
   <a href="#credits">Credits</a> •
-  <a href="#support">Support</a> •
   <a href="#license">License</a>
 </p>
 
@@ -43,28 +41,7 @@
 </tr>
 </table>
 
-## Installation
 
-just install it(sample doc)
-
-
-<!-- Design #2
-<center>
-   <table>
-   <tr>
-      <td align="center" width="30%">
-         <img src="./icon.gif">
-      </td>
-      <td align="center" width="70%">
-
-   # PasteMyst-Pas
-
-   An API wrapper for [PasteMyst](https://paste.myst.rs/) written in **Pascal!**
-
-   </tr>
-   </table>
-</center>
--->
 
 
 ## Sample Usage
@@ -93,4 +70,22 @@ end.
 | Edit pastes           | ✔️      | Get a language by extension | ✔️      |
 
 
-<!--✔️❌-->        
+<!--✔️❌-->
+
+<!-- Design #2
+<center>
+   <table>
+   <tr>
+      <td align="center" width="30%">
+         <img src="./icon.gif">
+      </td>
+      <td align="center" width="70%">
+
+   # PasteMyst-Pas
+
+   An API wrapper for [PasteMyst](https://paste.myst.rs/) written in **Pascal!**
+
+   </tr>
+   </table>
+</center>
+-->
