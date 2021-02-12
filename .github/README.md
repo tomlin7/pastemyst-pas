@@ -1,6 +1,6 @@
 <h1 align="center">
-  <br>
-  <img src="./res/logo_static.png" width="200" alt="PasteMyst.Pas">
+
+   <img src="./res/logo_static.png" width="200" alt="PasteMyst.Pas">
 </h1>
 
 <div align="center">
@@ -14,13 +14,13 @@
 ---
 
 <p align="center">
-  <a href="#about">About</a> •
-  <a href="#installation">Installation</a> • 
-  <a href="#features">Features</a> •
-  <a href="#wiki">Docs</a> •
-  <a href="./.github/CONTRIBUTING.md">Contributing</a> •
-  <a href="#credits">Credits</a> •
-  <a href="#license">License</a>
+   <a href="#about">About</a> •
+   <a href="#installation">Installation</a> • 
+   <a href="#FeatureSupport">Features</a> •
+   <a href="https://billyeatcookies.gitbook.io/pastemyst-pas">Docs</a> •
+   <a href="./CONTRIBUTING.md">Contributing</a> •
+   <a href="#credits">Credits</a> •
+   <a href="../LICENSE">License</a>
 </p>
 
 ---
@@ -28,18 +28,20 @@
 ## About
 
 <table style="margin-left: auto; margin-right: auto;">
-<tr>
-<td>
+   <tr>
+   <td>
 
-**PasteMyst-Pas** is an API wrapper written in **FreePascal** <img src="./res/fpc.gif" width=40> for [**pastemyst**](https://paste.myst.rs),
-a powerful website for storing and sharing text and code snippets. completely free and open source. PasteMyst is created by [CodeMyst](https://github.com/CodeMyst). This library contains pre-defined, easy-to-use functions which uses an HTTPClient to connect to the API.
+   **PasteMyst-Pas** is an API wrapper written in **FreePascal** <img src="./res/fpc.gif" width=40> for [**pastemyst**](https://paste.myst.rs),
+   a powerful website for storing and sharing text and code snippets. completely free and open source. PasteMyst is created by [CodeMyst](https://github.com/CodeMyst). This library contains pre-defined, easy-to-use functions which uses an HTTPClient to interact with the API.
 
-<p align="right">
-<sub>- Billy</sub>
-</p>
+   <p align="right">
+      <sub>
+         - Billy
+      </sub>
+   </p>
 
-</td>
-</tr>
+   </td>
+   </tr>
 </table>
 
 
@@ -48,20 +50,19 @@ a powerful website for storing and sharing text and code snippets. completely fr
 ## Sample Usage
 ```pas
 Program example;
-
-// importing the unit, this is important
-uses pastemyst;
-
-// your paste's id
-const paste_id = 'id here';
-
-begin
-   writeln('Fetching Paste with Id: ', paste_id);
+// using the pastemyst unit
+Uses pastemyst;
+// Pastemyst ID of the paste to fetch
+Const paste_id =  'id here';
+// Main Program
+Begin
+   // fetching the paste with give ID, 
+   // and printing it to the console
    Write(get_paste(paste_id), ^M);
-end.
+End.
 ```
-[documentation](https://billyeatcookies.gitbook.io/pastemyst-pas/)
-### Feature support
+
+## FeatureSupport
 | Feature               | Support| Feature                     | Support|
 | :--------------------:|:------:| :--------------------------:| :-----:|
 | Get pastes            | ✔️      | Delete pastes               | ✔️      | 
@@ -73,7 +74,7 @@ end.
 
 
 The package is on developement process. <br>
-[![forthebadge](https://forthebadge.com/images/badges/0-percent-optimized.svg)](https://forthebadge.com)
+![forthebadge](https://forthebadge.com/images/badges/0-percent-optimized.svg)
 
 
 <!--✔️❌-->
